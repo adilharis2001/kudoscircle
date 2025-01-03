@@ -29,8 +29,8 @@ export function FeaturesSection() {
     },
     {
       icon: Users,
-      title: "Expertise Matching",
-      description: "Get matched with contributors who understand your domain, ensuring every piece of feedback is relevant and impactful.",
+      title: "AI Feedback Assistant",
+      description: "Get intelligent suggestions while providing feedback, making it easier to share meaningful insights with reduced mental overhead.",
       gradient: "from-[#F472B6]/10 via-[#F472B6]/5 to-transparent",
       iconColor: "#F472B6",
       delay: "300"
