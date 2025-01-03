@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 230 65% 8%;
+    --foreground: 0 0% 100%;
+    --primary: 47 94% 58%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 47 94% 58% / 0.6;
+    --border: 240 3.7% 15.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-neutral-800;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} 
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+@layer utilities {
+  .safe-height {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+
+  .mobile-snap {
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+} 
