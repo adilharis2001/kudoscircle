@@ -1,6 +1,7 @@
 import React from 'react'
 import { Github, Twitter, Rocket } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -40,9 +41,18 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Brand & Description */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary via-primary/90 to-primary bg-clip-text text-transparent">
-                KudosCircle
-              </h3>
+              <div className="flex items-center">
+                <Image
+                  src="/kudos-circle-logo.png"
+                  alt="KudosCircle Logo"
+                  width={40}
+                  height={40}
+                  className="mr-3"
+                />
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-primary via-primary/90 to-primary bg-clip-text text-transparent">
+                  KudosCircle
+                </h3>
+              </div>
               <p className="text-sm text-gray-400 leading-relaxed">
                 A collaborative feedback marketplace connecting AI founders with contributors to exchange actionable insights and improve their products.
               </p>

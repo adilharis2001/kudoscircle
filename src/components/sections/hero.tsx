@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Sparkles, Star } from 'lucide-react'
+import Image from 'next/image'
 
 export function HeroSection() {
   return (
@@ -16,6 +17,24 @@ export function HeroSection() {
         
         {/* Decorative grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_80%)]" />
+      </div>
+
+      {/* Logo in top left */}
+      <div className="absolute top-0 left-0 w-full p-4 sm:p-6 lg:p-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center">
+            <Image
+              src="/kudos-circle-logo.png"
+              alt="KudosCircle Logo"
+              width={40}
+              height={40}
+              className="mr-3"
+            />
+            <span className="text-xl font-bold bg-gradient-to-r from-primary via-primary/90 to-primary bg-clip-text text-transparent">
+              KudosCircle
+            </span>
+          </div>
+        </div>
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
