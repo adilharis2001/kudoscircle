@@ -1,0 +1,154 @@
+# This file defines project specifications, architecture, and best practices for Cursor AI
+
+# Project Overview
+project_name: KudosCircle.AI
+description: KudosCircle is a collaborative feedback marketplace that connects AI founders with contributors who provide actionable insights to improve their products. Founders receive targeted feedback tailored to their needs, while contributors earn Kudos for their valuable input, creating a self-sustaining community focused on refining apps, agents, and tools.
+# Tech Stack
+frontend:
+  framework: React + Vite
+  language: TypeScript
+  styling: Tailwind CSS
+  ui_components: shadcn/ui
+  icons: lucide-react
+  state_management: React Context
+
+apis:
+  - OpenAI GPT-3.5
+  - Deepgram Speech-to-Text
+  - Firebase Authentication & Firestore
+
+# Architecture
+component_structure:
+  - components/: Reusable UI components
+  - contexts/: React Context providers
+  - lib/: Utility functions and API clients
+  - types/: TypeScript type definitions
+  - hooks/: Custom React hooks
+  - prompts/: OpenAI prompt templates
+
+# Design Guidelines
+colors:
+  primary: "#F9D72F" # Bright Yellow
+  background: "#0A0F1E" # Dark Blue
+  text: "#FFFFFF" # White
+  muted: "rgba(249, 215, 47, 0.6)" # Muted Yellow
+
+styling_rules:
+  - Use Tailwind CSS classes exclusively
+  - Maintain dark theme with yellow accents
+  - Ensure mobile-first responsive design
+  - Use glass-morphism effects for cards
+  - Maintain consistent spacing using Tailwind's spacing scale
+
+# Component Best Practices
+components:
+  structure:
+    - One component per file
+    - Use TypeScript interfaces for props
+    - Implement proper error boundaries
+    - Keep components focused and single-responsibility
+  
+  naming:
+    - PascalCase for component files and names
+    - camelCase for functions and variables
+    - kebab-case for CSS classes
+  
+  state_management:
+    - Use React Context for global state
+    - Prefer controlled components
+    - Implement proper loading and error states
+
+# TypeScript Guidelines
+typescript:
+  - Enable strict mode
+  - Define interfaces for all props and state
+  - Use proper type imports/exports
+  - Avoid any type unless absolutely necessary
+  - Use union types for specific value sets
+
+# API Integration Rules
+api_handling:
+  - Implement proper error handling
+  - Use TypeScript interfaces for API responses
+  - Centralize API calls in dedicated service files
+  - Implement request caching where appropriate
+  - Handle loading and error states consistently
+
+# Performance Guidelines
+performance:
+  - Lazy load components when possible
+  - Implement proper memoization
+  - Optimize images and assets
+  - Minimize bundle size
+  - Use proper Suspense boundaries
+
+# Accessibility Guidelines
+accessibility:
+  - Maintain proper heading hierarchy
+  - Ensure keyboard navigation
+  - Implement proper ARIA labels
+  - Maintain sufficient color contrast
+  - Support screen readers
+
+# Feature Specifications
+features:
+  voice_input:
+    - Support for multiple audio formats
+    - Real-time transcription
+    - Proper error handling for permissions
+    - Clear user feedback during recording
+
+  authentication:
+    - Email/password authentication
+    - Managed using Google Firebase
+    - Google OAuth support
+    - Protected routes
+    - Proper session management
+
+# Testing Guidelines
+testing:
+  - Write unit tests for utility functions
+  - Implement component testing with Vitest
+  - Test API integration points
+  - Maintain good test coverage
+  - Mock external services appropriately
+
+# Code Style
+code_style:
+  - Use prettier for formatting
+  - Follow ESLint rules
+  - Use meaningful variable names
+  - Write clear comments for complex logic
+  - Maintain consistent file structure
+
+# Error Handling
+error_handling:
+  - Implement proper error boundaries
+  - Use toast notifications for user feedback
+  - Log errors appropriately
+  - Graceful degradation
+  - Clear error messages
+
+# Security Guidelines
+security:
+  - Secure API key handling
+  - Implement proper authentication
+  - Validate user input
+  - Implement rate limiting
+  - Follow OWASP guidelines
+
+# Build and Deployment
+build:
+  - Optimize bundle size
+  - Implement proper code splitting
+  - Enable source maps for development
+  - Proper environment variable handling
+  - Automated deployment process
+
+# Documentation Requirements
+documentation:
+  - Document complex functions
+  - Maintain README.md
+  - Document environment setup
+  - API documentation
+  - Component documentation
