@@ -6,6 +6,25 @@ import Image from 'next/image'
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const quickLinks = [
+    {
+      name: "The Challenge",
+      href: "#problem"
+    },
+    {
+      name: "How It Works",
+      href: "#how-it-works"
+    },
+    {
+      name: "Features",
+      href: "#features"
+    },
+    {
+      name: "FAQ",
+      href: "#faq"
+    }
+  ]
+
   return (
     <footer className="relative overflow-hidden">
       {/* CTA Section */}
@@ -58,25 +77,20 @@ export function Footer() {
               </p>
             </div>
 
-            {/* Quick Links */}
+            {/* Quick Links - Updated */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold">Quick Links</h4>
               <ul className="space-y-2">
-                <li>
-                  <a href="#features" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#how-it-works" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
-                    How It Works
-                  </a>
-                </li>
-                <li>
-                  <a href="#faq" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
-                    FAQ
-                  </a>
-                </li>
+                {quickLinks.map((link) => (
+                  <li key={link.href}>
+                    <a 
+                      href={link.href}
+                      className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 

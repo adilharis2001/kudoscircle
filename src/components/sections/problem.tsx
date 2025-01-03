@@ -27,7 +27,7 @@ export function ProblemSection() {
   ]
 
   return (
-    <section className="relative w-full py-16 sm:py-20 lg:py-32">
+    <section id="problem" className="relative w-full py-16 sm:py-20 lg:py-32">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900/50 via-background to-background" />
